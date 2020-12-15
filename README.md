@@ -33,6 +33,11 @@ Turns out my problem was that it was sending up to the next prompt before changi
 ### Commit 6: Lowercase confirm
 Goal for this commit: Ask if they want lowercase characters and then update the object properties accordingly. 
 
+### Commit 7: Remaining criteria questions
+Goal for this commit: Repeat the above process for the remaining yes/no questions. 
+Changed the confirm to a prompt because that's what the homework asks for.
+
+
 ## credits
 
 Discussion on how to call a function within that same fuction https://stackoverflow.com/questions/2940862/javascript-how-to-restart-a-function-from-inside-it

@@ -13,7 +13,21 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", passwordprompt);
 
-// Prompt
+// Prompt 1
 function passwordprompt() {
-  prompt("First Prompt will go here", " ");
+  var prompt1 = prompt("Between 8 and 128 characters, how long would you like your password to be?", " ");
+  var passwordlength = parseInt(prompt1);
+
+  if  (prompt1 == null || prompt1 == "") {
+    alert("Cancelled");
+  }
+  else if (passwordlength >= 8 && passwordlength <= 128) {
+    alert("Thank You");
+  }
+  else if (passwordlength < 8 || passwordlength > 128) {
+    alert("Please enter a number that is between 8 and 128");
+  }
+  else {
+    alert("I'm sorry, please try again.");
+  }
 }

@@ -22,4 +22,7 @@ Copied files for homework into the folder.
 My first goal: When the button is clicked, a prompt appears that prints to the box.
 Then in next steps, I'll expand on this. 
 
+### Commit 4: Password Length
+Next goal: Prompt asks for pasword length. If they provide a number that is not in the range, it will tell them and ask again. If number is in the range, it moves on. 
+
 ## credits

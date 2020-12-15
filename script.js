@@ -43,5 +43,21 @@ function lengthprompt() {
 
 // Prompt 2: Lowercase Prompt
   function lowercaseprompt(){
-    var prompt2 = prompt("Next Prompt goes here", "");
+    if (confirm("Click okay if you like the password to include lowercase characters.")) {
+      traits.lc = 1; // for true
+      uppercaseprompt();
+    } 
+    else {
+      traits.lc = 0; //for false
+      uppercaseprompt();
+    }
+  }
+
+  function uppercaseprompt(){
+    if (confirm(traits.lc)) {
+
+    }
+    else {
+
+    }
   }

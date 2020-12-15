@@ -30,6 +30,9 @@ Goal for this commit: If a valid number is given, it moves on to the next prompt
 I have it direct you to the next prompt, but I am having trouble accessing the information that was inputed before. 
 Turns out my problem was that it was sending up to the next prompt before changing the object's properties
 
+### Commit 6: Lowercase confirm
+Goal for this commit: Ask if they want lowercase characters and then update the object properties accordingly. 
+
 ## credits
 
 Discussion on how to call a function within that same fuction https://stackoverflow.com/questions/2940862/javascript-how-to-restart-a-function-from-inside-it

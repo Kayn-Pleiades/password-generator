@@ -12,12 +12,14 @@ var traits = {
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
 }
+
+var passwordpool = "";
+var password = "";
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", lengthprompt);
@@ -32,6 +34,8 @@ function lengthprompt() {
   }
   else if (passwordlength >= 8 && passwordlength <= 128) { // If they enter a number in the range
     traits.ln = passwordlength;
+    passwordpool = ""; // so you can make a new password without refreshing
+    password = "";
     lowercaseprompt();
   }
   else if (passwordlength < 8 || passwordlength > 128) { // If they enter a number outside of the range
@@ -47,12 +51,14 @@ function lengthprompt() {
 // Prompt 2: Lowercase Prompt
 function lowercaseprompt() {
   var prompt2 = prompt("Would you like to include lowercase characters in your password?", "");
+  var lower = "abcdefghijklmnopqrstuvwxyz";
 
   if  (prompt2 == null) { // If they click cancel
     alert("Cancelled");
   }
   else if (prompt2 == "yes" || prompt2 == "Yes") {
     traits.lc = 1; // true
+    passwordpool += lower; // includes the lowercase characters in those that will generate the password
     uppercaseprompt();
   }
   else if (prompt2 == "no" || prompt2 == "No") {
@@ -68,12 +74,14 @@ function lowercaseprompt() {
 // Prompt 3: Uppercase Prompt
 function uppercaseprompt() {
   var prompt3 = prompt("Would you like to include uppercase characters in your password?", "");
+  var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
   if  (prompt3 == null) { // If they click cancel
     alert("Cancelled");
   }
   else if (prompt3 == "yes" || prompt3 == "Yes") {
     traits.uc = 1; // true
+    passwordpool += upper; // includes the uppercase characters in those that will generate the password
     numericprompt();
   }
   else if (prompt3 == "no" || prompt3 == "No") {
@@ -89,12 +97,14 @@ function uppercaseprompt() {
 // Prompt 4: Numeric Prompt
 function numericprompt() {
   var prompt4 = prompt("Would you like to include numbers in your password?", "");
+  var num = "1234567890";
 
   if  (prompt4 == null) { // If they click cancel
     alert("Cancelled");
   }
   else if (prompt4 == "yes" || prompt4 == "Yes") {
     traits.n = 1; // true
+    passwordpool += num; // includes the numerical characters in those that will generate the password
     specialprompt();
   }
   else if (prompt4 == "no" || prompt4 == "No") {
@@ -110,12 +120,14 @@ function numericprompt() {
 // Prompt 5: Special Characters Prompt
 function specialprompt() {
   var prompt5 = prompt("Would you like to include special characters in your password?", "");
+  var special = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 
   if  (prompt5 == null) { // If they click cancel
     alert("Cancelled");
   }
   else if (prompt5 == "yes" || prompt5 == "Yes") {
     traits.sc = 1; // true
+    passwordpool += special; // includes the special characters in those that will generate the password
     validation();
   }
   else if (prompt5 == "no" || prompt5 == "No") {
@@ -134,6 +146,15 @@ function validation() {
     lowercaseprompt();
   }
   else {
-    alert("yay!");
+    password = generatePassword(traits.ln);
   }
+}
+
+function generatePassword(length){
+  var charactersLength = passwordpool.length;
+
+  for ( var i = 0; i < length; i++ ) {
+     password += passwordpool.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  writePassword();
 }

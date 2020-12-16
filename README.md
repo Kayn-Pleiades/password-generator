@@ -41,8 +41,14 @@ Changed the confirm to a prompt because that's what the homework asks for.
 Goal for this commit: validate that at least one character type was selected.
 I did this by making sure that at least on of the character types is true/has a value of 1.
 
+### Commit 9: Password Generation
+Goal for this commit: To randomly generate a string that matches the criteria. 
+I got it working, but if I try to generate a 2nd password without refreshing, it includes "undefined" at the start of the string. 
+I fixed this by resetting the password variable everytime the process restarts. 
 
 ## credits
 
 Discussion on how to call a function within that same fuction https://stackoverflow.com/questions/2940862/javascript-how-to-restart-a-function-from-inside-it
+Useful reference on how to generate a string of random numbers: https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
+
 

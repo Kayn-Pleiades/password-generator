@@ -118,7 +118,7 @@ function specialprompt() {
     traits.sc = 1; // true
     validation();
   }
-  else if (prompt2 == "no" || prompt2 == "No") {
+  else if (prompt5 == "no" || prompt5 == "No") {
     traits.sc = 0; // false
     validation();
   }
@@ -129,5 +129,11 @@ function specialprompt() {
 }
 
 function validation() {
-  console.log(traits);
+  if (traits.lc == 0 && traits.uc == 0 && traits.n == 0 && traits.sc == 0) {
+    alert("Your password must contain at least one type of character. Please try again.");
+    lowercaseprompt();
+  }
+  else {
+    alert("yay!");
+  }
 }

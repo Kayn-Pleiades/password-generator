@@ -37,6 +37,10 @@ Goal for this commit: Ask if they want lowercase characters and then update the 
 Goal for this commit: Repeat the above process for the remaining yes/no questions. 
 Changed the confirm to a prompt because that's what the homework asks for.
 
+### Commit 8: Validating the criteria
+Goal for this commit: validate that at least one character type was selected.
+I did this by making sure that at least on of the character types is true/has a value of 1.
+
 
 ## credits
 

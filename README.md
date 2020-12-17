@@ -1,5 +1,7 @@
 # password-generator
 
+Project is deployed here: https://kayn-pleiades.github.io/password-generator/
+
 ## Table of Contents
 
 * [Description](#description)
@@ -7,6 +9,11 @@
 * [Credits](#credits)
 
 ## description 
+
+For this project I made a password generator that creates a password to the specifications that the user provides.
+I built this password generator so that it can repeat the process without needing to refresh.
+I also made sure that it tells you when you enter something invalid and then lets you try again. 
+
 
 
 
@@ -45,6 +52,9 @@ I did this by making sure that at least on of the character types is true/has a 
 Goal for this commit: To randomly generate a string that matches the criteria. 
 I got it working, but if I try to generate a 2nd password without refreshing, it includes "undefined" at the start of the string. 
 I fixed this by resetting the password variable everytime the process restarts. 
+
+### Commit 10: Add Screenshots to github
+I added my description and link to deployment. Screenshots were taken and put in my assests folder. 
 
 ## credits
 

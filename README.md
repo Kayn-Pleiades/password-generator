@@ -14,7 +14,8 @@ For this project I made a password generator that creates a password to the spec
 I built this password generator so that it can repeat the process without needing to refresh.
 I also made sure that it tells you when you enter something invalid and then lets you try again. 
 
-
+![screenshot of what happens when you click the button](https://github.com/Kayn-Pleiades/password-generator/blob/main/Assets/Capture.PNG)
+![screenshot of a generated password](https://github.com/Kayn-Pleiades/password-generator/blob/main/Assets/Capture2.PNG)
 
 
 ## process
@@ -55,6 +56,9 @@ I fixed this by resetting the password variable everytime the process restarts.
 
 ### Commit 10: Add Screenshots to github
 I added my description and link to deployment. Screenshots were taken and put in my assests folder. 
+
+### Commit 11: Screenshots added
+Added screenshots to the README.
 
 ## credits
 
